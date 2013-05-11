@@ -7,17 +7,18 @@
 </head>
 <body>
     <div id="mocha"></div>
+
     <script src="lib/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
-    <!-- assertion framework -->
     <script src="lib/chai.js"></script>
-    <script>var expect = chai.expect</script>
+    <script data-main="scripts/main" src="components/requirejs/require.js"></script>
 
-    <!-- include source files here... -->
+    <script>
+      mocha.setup('bdd');
+      window.expect = chai.expect;
 
-    <!-- include spec files here... -->
-    <script src="spec/test.js"></script>
-
-    <script>mocha.run()</script>
+      require(['spec/test.js'], function() {
+        mocha.run();
+      });
+    </script>
 </body>
 </html>

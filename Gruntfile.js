@@ -68,7 +68,8 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')
+              mountFolder(connect, 'test'),
+              mountFolder(connect, 'app')
             ];
           }
         }
@@ -115,7 +116,7 @@ module.exports = function (grunt) {
     mocha: {
       all: {
         options: {
-          run: true,
+          run: false,
           urls: ['http://localhost:<%= connect.options.port %>/index.html']
         }
       }
@@ -344,4 +345,7 @@ module.exports = function (grunt) {
     'build'
   ]);
 };
+
+
+
 

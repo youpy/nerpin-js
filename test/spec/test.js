@@ -71,7 +71,7 @@ define(['nerpin', 'nerpin-item', 'nerpin-item/micron', 'data'], function(Nerpin,
 
           expect(values[0]).to.be.eql([0x63, 0]);
           expect(values[1]).to.be.eql([0x62, 2]);
-          expect(values[2]).to.be.eql([0x06, 0.15625]);
+          expect(values[2]).to.be.eql([0x06, 0]);
           expect(values[3]).to.be.eql([0x26, 20]);
         });
       });

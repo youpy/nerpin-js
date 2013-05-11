@@ -22,7 +22,7 @@ define(['nerpin', 'nerpin-item/micron', 'data', 'jquery'], function (Nerpin, Mic
       $popup  = $('.popup'),
       items   = nerpin.items();
   
-  $.each(items, function(i, item) {
+  $.each(items, function(_, item) {
     var $item = $('<div class="item"></div>');
 
     $item.css({

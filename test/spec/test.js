@@ -1,6 +1,6 @@
 'use strict';
 
-define(['hello', 'nerpin-item', 'nerpin-item/micron', 'data'], function(Nerpin, NerpinItem, Micron, data) {
+define(['nerpin', 'nerpin-item', 'nerpin-item/micron', 'data'], function(Nerpin, NerpinItem, Micron, data) {
   describe(Nerpin, function () {
     var nerpin;
 

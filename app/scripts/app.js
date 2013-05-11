@@ -1,8 +1,9 @@
 /*global define */
-define(['hello'], function (hello) {
+define(['nerpin'], function (hello) {
   'use strict';
 
   return hello;
 });
+
 
 

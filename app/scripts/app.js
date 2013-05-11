@@ -35,8 +35,13 @@ define(['nerpin', 'nerpin-item/micron', 'data', 'jquery'], function (Nerpin, Mic
   });
 
   $('body').on('mousemove', function($event) {
-    var $item      = $($event.target), 
-        y          = $event.pageY,
+    var $item = $($event.target);
+
+    if($item.is($('body'))) {
+      return;
+    }
+
+    var y          = $event.pageY,
         height     = $item.height(),
         scale      = (height - y) / height,
         nerpinItem = $item.data('nerpin-item'),
@@ -53,3 +58,4 @@ define(['nerpin', 'nerpin-item/micron', 'data', 'jquery'], function (Nerpin, Mic
 
   return Nerpin;
 });
+

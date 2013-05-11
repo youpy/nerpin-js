@@ -1,6 +1,8 @@
 /*global define */
-define([], function () {
+define(['hello'], function (hello) {
   'use strict';
 
-  return '\'Allo \'Allo!';
+  return hello;
 });
+
+

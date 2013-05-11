@@ -17,3 +17,4 @@ require(['app', 'jquery', 'bootstrap'], function (app, $) {
   console.log(app);
   console.log('Running jQuery %s', $().jquery);
 });
+

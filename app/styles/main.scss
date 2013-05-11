@@ -37,4 +37,17 @@ html, body {
     display: none;
     pointer-events: none;
 }
-   
+
+/* for Jazz Plugin */
+object {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-style: none;
+    border-width: 0px;
+    max-width: 0px;
+    max-height: 0px;
+}
+

@@ -9,6 +9,8 @@ define [], () ->
         [0x06, @valueFor0x06(value)],
         [0x26, @valueFor0x26(value)]
       ]
+    valuesAt: (scale) ->
+      return @values(parseInt(((Math.abs(@min) + @max) * scale) - Math.abs(@min)))
     valueFor0x06: (value) ->
       return 0
     valueFor0x26: (value) ->

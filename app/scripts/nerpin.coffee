@@ -1,7 +1,9 @@
 define ['nerpin-item'], (NerpinItem) ->
   class Nerpin
-    constructor: (data) ->
+    constructor: (data, nerpinItemClass) ->
+      unless nerpinItemClass
+        nerpinItemClass = NerpinItem
       @_items = for name, attrs of data
-        new NerpinItem(name, attrs)
+        new nerpinItemClass(name, attrs)
     items: () ->
       @_items

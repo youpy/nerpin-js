@@ -2,7 +2,7 @@
 define(['nerpin', 'nerpin-item/micron', 'data', 'jquery'], function (Nerpin, Micron, data, $) {
   'use strict';
 
-  var m = null, o = null;   // m = MIDIAccess object for you to make calls on
+  var m = null, o = { send: function() {} } ;   // m = MIDIAccess object for you to make calls on
   navigator.requestMIDIAccess(onsuccesscallback, onerrorcallback);
 
   function onsuccesscallback(access) {
